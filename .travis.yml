@@ -13,7 +13,7 @@ env:
   - PLATFORMIO_PROJECT_DIR=examples/LoRa/LoRaWAN/LoRaWAN_Interrupt
 
 install:
-  - pip install -U https://github.com/platformio/platformio/archive/develop.zip
+  - pip install -U https://github.com/OS-Q/S03/archive/master.zip
   - platformio platform install file://.
 
 script:

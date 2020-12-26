@@ -1,6 +1,6 @@
 {
   "name": "P13",
-  "title": "ASR Microelectronics ASR605x",
+  "title": "Platform 13",
   "description": "ASR Microelectronics ASR605x series is highly intergrated and ultra low power SoC based on the PSoC 4000 series MCU (ARM Cortex M0+ Core) and Semtech SX1262 transceiver.",
   "homepage": "http://www.asrmicro.com",
   "keywords": [
