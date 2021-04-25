@@ -23,6 +23,7 @@ jobs:
             pio run -d examples/arduino-lowpower
             pio run -d examples/PingPong
             pio run -d examples/LoRaWAN
+            pio run -d examples/LoRaWAN_Interrupt
 
   PIO:
     docker:
@@ -46,6 +47,7 @@ jobs:
             pio run -d examples/arduino-lowpower
             pio run -d examples/PingPong
             pio run -d examples/LoRaWAN
+            pio run -d examples/LoRaWAN_Interrupt
 
 workflows:
     version: 2

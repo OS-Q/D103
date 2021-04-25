@@ -10,7 +10,12 @@ git:
 env:
   - PLATFORMIO_PROJECT_DIR=examples/arduino-blink
   - PLATFORMIO_PROJECT_DIR=examples/arduino-adc
+  - PLATFORMIO_PROJECT_DIR=examples/arduino-lowpower
+  - PLATFORMIO_PROJECT_DIR=examples/arduino-rgb
+  - PLATFORMIO_PROJECT_DIR=examples/LoRaWAN_Interrupt
+  - PLATFORMIO_PROJECT_DIR=examples/PingPong
   - PLATFORMIO_PROJECT_DIR=examples/LoRaWAN
+
 
 install:
   - pip install -U https://github.com/OS-Q/M03/releases/latest/download/qio.zip
