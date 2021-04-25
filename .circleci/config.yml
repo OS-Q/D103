@@ -1,0 +1,31 @@
+version: 2
+jobs:
+
+  PIO:
+    docker:
+      - image: python:3
+    steps:
+      - checkout
+      - run:
+          name: "Install"
+          command: |
+            apt update
+            apt install -y git
+            git submodule update --init --recursive
+            python -m pip install --upgrade pip
+            pip install -U https://github.com/platformio/platformio/archive/develop.zip
+            pio platform install file://.
+      - run:
+          name: "Build"
+          command: |
+            pio run -d examples/arduino-adc
+            pio run -d examples/arduino-blink
+            pio run -d examples/arduino-lowpower
+            pio run -d examples/PingPong
+            pio run -d examples/LoRaWAN
+
+workflows:
+    version: 2
+    run_ci:
+        jobs:
+          - PIO

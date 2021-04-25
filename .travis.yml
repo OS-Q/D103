@@ -1,23 +1,24 @@
 language: python
 python:
-  - "2.7"
-  - "3.7"
+  - "3.9"
+os:
+  - linux
+
+git:
+  depth: 1
 
 env:
-  - PLATFORMIO_PROJECT_DIR=examples/arduino-adc
   - PLATFORMIO_PROJECT_DIR=examples/arduino-blink
-  - PLATFORMIO_PROJECT_DIR=examples/arduino-lowpower
-  - PLATFORMIO_PROJECT_DIR=examples/arduino-rgb
-  - PLATFORMIO_PROJECT_DIR=examples/LoRa/LoRaBasic/PingPong
-  - PLATFORMIO_PROJECT_DIR=examples/LoRa/LoRaWAN/LoRaWAN
-  - PLATFORMIO_PROJECT_DIR=examples/LoRa/LoRaWAN/LoRaWAN_Interrupt
+  - PLATFORMIO_PROJECT_DIR=examples/arduino-adc
+  - PLATFORMIO_PROJECT_DIR=examples/LoRaWAN
 
 install:
-  - pip install -U https://github.com/OS-Q/S03/archive/master.zip
-  - platformio platform install file://.
+  - pip install platformio
+    pio update
+  - pio platform install file://.
 
 script:
-  - platformio run -s -d $PLATFORMIO_PROJECT_DIR
+  - qio run -d $PLATFORMIO_PROJECT_DIR
 
 notifications:
   email: false
