@@ -95,37 +95,3 @@ jobs:
         with:
           name: pio_${{ matrix.example }}_${{ matrix.os }}
           path: examples/${{ matrix.example }}/.pio/build
-
-  pio_pass:
-    needs:
-      - PIO
-    if: success()
-    runs-on: ubuntu-latest
-    steps:
-      - name: notification
-        uses: Qful/mqtt-action@master
-        with:
-          protocol: mqtt
-          host: ${{secrets.MQTT_SERVER}}
-          port: 1883
-          username: ${{secrets.MQTT_USERNAME}}
-          password: ${{secrets.MQTT_PASSWORD}}
-          topic: ${{github.repository}}/${{github.workflow}}
-          message: "PIO success"
-
-  pio_fail:
-    needs:
-      - PIO
-    if: failure()
-    runs-on: ubuntu-latest
-    steps:
-      - name: notification
-        uses: Qful/mqtt-action@master
-        with:
-          protocol: mqtt
-          host: ${{secrets.MQTT_SERVER}}
-          port: 1883
-          username: ${{secrets.MQTT_USERNAME}}
-          password: ${{secrets.MQTT_PASSWORD}}
-          topic: ${{github.repository}}/${{github.workflow}}
-          message: "PIO failure"
