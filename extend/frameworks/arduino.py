@@ -8,7 +8,7 @@ platform = env.PioPlatform()
 board = env.BoardConfig()
 core = board.get("build.core")
 
-FRAMEWORK_DIR = platform.get_package_dir("framework-arduinoasrmicro650x")
+FRAMEWORK_DIR = platform.get_package_dir("A421")
 assert os.path.isdir(FRAMEWORK_DIR)
 
 env.Append(

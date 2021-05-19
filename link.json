@@ -14,7 +14,6 @@
       "CubeCell",
       "LoRa"
   ],
-  "license": "Apache-2.0",
   "engines": {
     "platformio": "^5"
   },
@@ -25,7 +24,7 @@
   "version": "1.2.1",
   "frameworks": {
     "arduino": {
-      "package": "framework-arduinoasrmicro650x",
+      "package": "A421",
       "script": "extend/frameworks/arduino.py"
     }
   },
@@ -35,11 +34,10 @@
       "owner": "platformio",
       "version": "~1.90201.0"
     },
-    "framework-arduinoasrmicro650x": {
+    "A421": {
       "type": "framework",
-      "owner": "heltecautomation",
-      "version": "~1.2.0",
-      "optional": true
+      "optional": true,
+      "version": "https://github.com/OS-Q/A421.git"
     },
     "tool-cubecellelftool": {
       "owner": "heltecautomation",
