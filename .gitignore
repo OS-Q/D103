@@ -15,3 +15,12 @@ examples/**/*.md
 **/CHANGE*
 .gitmodules
 **/.travis.yml
+LICENSE*
+*.png
+*.jpg
+examples/**/*.yml
+examples/**/*.md
+**/CONTRI*
+**/CHANGE*
+.gitmodules
+README
